@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POA / NDA Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- LOGIN VIEW -->
+    <div id="view-login" class="view">
+        <h2>Member Login</h2>
+        <input id="login-username" placeholder="Username">
+        <input id="login-password" type="password" placeholder="Password">
+        <button id="login-btn">Login</button>
+    </div>
+
+    <!-- NDA VIEW -->
+    <div id="view-nda" class="view" style="display:none;">
+        <h2>NDA Agreement</h2>
+        <p>You must accept the NDA before continuing.</p>
+        <textarea readonly style="width:100%;height:150px;">
+NDA TEXT GOES HERE.
+        </textarea>
+        <button id="accept-nda-btn">Accept NDA</button>
+    </div>
+
+    <!-- GREEN-LIGHT VIEW -->
+    <div id="view-greenlight" class="view" style="display:none;">
+        <h2>Green-Light Approval</h2>
+        <p>Your account requires green-light approval before POA can be used.</p>
+        <button id="request-greenlight-btn">Request Approval</button>
+    </div>
+
+    <!-- POA VIEW -->
+    <div id="view-poa" class="view" style="display:none;">
+        <h2>Power of Attorney</h2>
+        <p>You now have POA access. All actions are logged.</p>
+        <button id="poa-action-1">Execute Action 1</button>
+        <button id="poa-action-2">Execute Action 2</button>
+    </div>
+
+    <!-- ACTIVITY FEED -->
+    <div id="view-feed" class="view" style="display:none;">
+        <h2>Activity Feed</h2>
+        <div id="feed-container"></div>
+        <button id="back-to-poa">Back</button>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+
+</body>
+</html>
+
+
